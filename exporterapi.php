@@ -28,8 +28,21 @@ class exporterapi extends Module
 
   }
 
+  public function hookAddWebserviceResources($resources) {
+    $added_resources['exportapi'] = [
+      'description' => 'Export Orders',
+      'specific_management' => true,
+    ];
+
+    return $added_resources;
+  }
+
   public function install() {
-    return parent::install();
+    if (!parent::install() || !$this->registerHook('addWebserviceResources')) {
+      return false;
+    }
+
+    return true;
   }
 
   public function uninstall() {
