@@ -4,6 +4,8 @@ if(!defined('_PS_VERSION_')) {
   exit;
 }
 
+include_once (PS_MODULE_DIR_ . 'exporterapi/classes/OrderDetailed.php');
+
 class exporterapi extends Module 
 {
   public function __construct() 
@@ -29,9 +31,9 @@ class exporterapi extends Module
   }
 
   public function hookAddWebserviceResources($resources) {
-    $added_resources['exportapi'] = [
-      'description' => 'Export Orders',
-      'specific_management' => true,
+    $added_resources['orderdetailed'] = [
+      'description' => 'Export Detailed Orders',
+      'class' => 'OrderDetailed'
     ];
 
     return $added_resources;
