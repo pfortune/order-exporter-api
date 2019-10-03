@@ -5,7 +5,7 @@ class OrderDetailed extends ObjectModel
 {
     public function __construct()
     {
-        if ($_GET ['orderId'] == null) {
+        if ($_GET ['method'] == null) {
             Json::generate(400, "error", "You must provide a valid method.");
         } else {
             $func = $_GET ['method'];
