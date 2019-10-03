@@ -26,7 +26,7 @@ class OrderDetailed extends ObjectModel
         if (empty($objOrder->id)) {
             Json::generate(400, "error", "You have passed wrong orderId.");
         } else {
-            $orderDetailResponse = $this->getOrderDetails($orDerId);
+            $orderDetailResponse = $this->getOrderDetails($orderId);
         }
         
         Json::generate(200, "success", "Order details fetched successfully.", $orderDetailResponse);
