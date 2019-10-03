@@ -1,5 +1,5 @@
 <?php
-include_once (PS_MODULE_DIR_ . 'exporterapi/classes/Json.php');
+include_once (_PS_MODULE_DIR_ . 'exporterapi/classes/Json.php');
 
 class OrderDetailed extends ObjectModel {
   

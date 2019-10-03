@@ -4,7 +4,7 @@ if(!defined('_PS_VERSION_')) {
   exit;
 }
 
-include_once (PS_MODULE_DIR_ . 'exporterapi/classes/OrderDetailed.php');
+include_once(_PS_MODULE_DIR_ . 'exporterapi/classes/OrderDetailed.php');
 
 class exporterapi extends Module 
 {
