@@ -16,9 +16,9 @@ class exporterapi extends Module
         $this->author = 'Peter Fortune';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = [
-      'min' => '1.7',
-      'max' => '1.7.6'
-    ];
+            'min' => '1.7',
+            'max' => '1.7.6'
+        ];
         $this->bootstrap = true;
 
         parent::__construct();
@@ -32,9 +32,14 @@ class exporterapi extends Module
     public function hookAddWebserviceResources($resources)
     {
         $added_resources['orderdetailed'] = [
-      'description' => 'Export Detailed Orders',
-      'class' => 'OrderDetailed'
-    ];
+            'description' => 'Export Detailed Orders',
+            'class' => 'OrderDetailed'
+        ];
+
+        $added_resources['order_status_update'] = [
+            'description' => 'Update Order Status',
+            'class' => 'UpdateStatus'
+        ];
 
         return $added_resources;
     }
