@@ -20,7 +20,7 @@ class UpdateStatus extends ObjectModel
         
     private function updateOrderStatus()
     {
-        $orderid 			= $postdata->orderid;
+        $orderid = $postdata->orderid;
         $statusid	= $postdata->statusid;
         
         $objOrder = new Order($orderid);
