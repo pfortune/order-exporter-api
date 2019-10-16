@@ -76,13 +76,13 @@ class OrderDetailed extends ObjectModel
         $countryIso = CountryCore::getIsoById($addressInfo->id_country);
         
         $resultOrderResponse = array(
-            "id_carrier"=> $orderDetails->id_carrier,
             'company'   => $addressInfo->company,
             'firstname' => $CustomerCoreDetail->firstname,
             'lastname'  => $CustomerCoreDetail->lastname,
             "id" 		=> (int) $orderId,
             "date_add"	=> $orderDetails->date_add,
             'id_customer' => $orderDetails->id_customer,
+            'id_carrier'=> $orderDetails->id_carrier,
             'address1'	=> $addressInfo->address1,
             'address2'	=> $addressInfo->address2,
             'city'		=> $addressInfo->city,
